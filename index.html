@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>MUSIC PAL LIVE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">MUSIC PAL <span>LIVE</span></div>
+    <div class="header-actions">
+      <button id="newSongBtn">+ New Song</button>
+      <button id="saveBtn">Save</button>
+    </div>
+  </header>
+
+  <main class="app-layout">
+    <aside class="sidebar">
+      <h3>LIBRARY</h3>
+      <button class="nav-item active" data-view="songs">🎵 Songs</button>
+      <button class="nav-item" data-view="media">🖼️ Media</button>
+      <button class="nav-item" data-view="text">📝 Text</button>
+
+      <div class="section-heading">SONG PARTS</div>
+      <div id="partsList"></div>
+
+      <button id="addPartBtn" class="add-part">+ Add Song Part</button>
+    </aside>
+
+    <section class="workspace">
+      <div class="song-toolbar">
+        <input id="songTitle" type="text" placeholder="Enter song title">
+        <span id="saveStatus">Ready</span>
+      </div>
+
+      <div class="editor-area">
+        <div id="emptyState">
+          <h2>Welcome to MUSIC PAL LIVE</h2>
+          <p>Create a song, then add and arrange its parts in any order.</p>
+          <button id="startBtn">+ Create Your First Song</button>
+        </div>
+
+        <div id="songEditor" hidden>
+          <div class="part-heading">
+            <input id="partTitle" type="text" placeholder="Part name">
+            <button id="deletePartBtn">Delete Part</button>
+          </div>
+
+          <label for="lyricsInput">LYRICS</label>
+          <textarea id="lyricsInput" placeholder="Enter lyrics here..."></textarea>
+
+          <label for="chordsInput">CHORDS</label>
+          <textarea id="chordsInput" placeholder="Enter chords here..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <aside class="preview-panel">
+      <h3>OUTPUT PREVIEW</h3>
+      <div class="preview-screen">
+        <div id="previewContent">Your slide preview</div>
+      </div>
+      <p class="preview-note">Main output: lyrics only</p>
+      <button id="openOutputBtn">Open Presentation Output</button>
+    </aside>
+  </main>
+
+  <footer class="transport">
+    <button id="prevBtn">◀ Previous</button>
+    <span id="slideCounter">No slides</span>
+    <button id="nextBtn">Next ▶</button>
+    <button id="fullscreenBtn">⛶ Fullscreen</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
